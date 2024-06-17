@@ -5,46 +5,130 @@
 </div>
 
 <div class="container">
+    <div class="text-center">
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal">Ajouter une
+            photo</button>
+    </div>
     <div class="row row-cols-2 row-cols-lg-3">
         <div class="col p-3">
             <div class="image-card text-white">
-                <img src="../images/bar.jpg" class="rounded w-100"/>
+                <img src="../images/bar.jpg" class="rounded w-100" />
                 <p class="titre-image">Titre</p>
+                <div class="action-image-buttons">
+                    <button type="button" class="btn btn-outline-light"><i class="bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"></i></button>
+                    <button type="button" class="btn btn-outline-light"><i class="bi bi-trash"  data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"></i></button>
+                </div>
             </div>
         </div>
         <div class="col p-3">
             <div class="image-card text-white">
-                <img src="../images/cafe.jpg" class="rounded w-100"/>
+                <img src="../images/cafe.jpg" class="rounded w-100" />
                 <p class="titre-image">Titre</p>
+                <div class="action-image-buttons">
+                    <button type="button" class="btn btn-outline-light"><i class="bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"></i></button>
+                    <button type="button" class="btn btn-outline-light"><i class="bi bi-trash"></i></button>
+                </div>
             </div>
         </div>
-        
+
         <div class="col p-3">
             <div class="image-card text-white">
-                <img src="../images/chef.png" class="rounded w-100"/>
+                <img src="../images/chef.png" class="rounded w-100" />
                 <p class="titre-image">Titre</p>
+                <div class="action-image-buttons">
+                    <button type="button" class="btn btn-outline-light"><i class="bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"></i></button>
+                    <button type="button" class="btn btn-outline-light"><i class="bi bi-trash"></i></button>
+                </div>
             </div>
         </div>
-        
+
         <div class="col p-3">
             <div class="image-card text-white">
-                <img src="../images/cuisine.jpg" class="rounded w-100"/>
+                <img src="../images/cuisine.jpg" class="rounded w-100" />
                 <p class="titre-image">Titre</p>
+                <div class="action-image-buttons">
+                    <button type="button" class="btn btn-outline-light"><i class="bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"></i></button>
+                    <button type="button" class="btn btn-outline-light"><i class="bi bi-trash"></i></button>
+                </div>
             </div>
         </div>
-        
+
         <div class="col p-3">
             <div class="image-card text-white">
-                <img src="../images/planche.jpg" class="rounded w-100"/>
+                <img src="../images/planche.jpg" class="rounded w-100" />
                 <p class="titre-image">Titre</p>
+                <div class="action-image-buttons">
+                    <button type="button" class="btn btn-outline-light"><i class="bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"></i></button>
+                    <button type="button" class="btn btn-outline-light"><i class="bi bi-trash"></i></button>
+                </div>
             </div>
         </div>
-        
+
         <div class="col p-3">
             <div class="image-card text-white">
-                <img src="../images/verres.jpg" class="rounded w-100"/>
+                <img src="../images/verres.jpg" class="rounded w-100" />
                 <p class="titre-image">Titre</p>
+                <div class="action-image-buttons">
+                    <button type="button" class="btn btn-outline-light"><i class="bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"></i></button>
+                    <button type="button" class="btn btn-outline-light"><i class="bi bi-trash"></i></button>
+                </div>
             </div>
         </div>
     </div>
+    <div class="text-center">
+        <a href="#" class="btn  btn-primary">Réserver</a>
+    </div>
 </div>
+
+<!-- Modal édition -->
+<div class="modal fade" id="EditionPhotoModal" tabindex="-1" aria-labelledby="EditionPhotoModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title fs-5" id="EditionPhotoModal">Edition photo</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                
+                    <form class="">
+                        <div class="mb-3">
+                            <label for="NamePhotoInput" class="form-label">Titre</label>
+                            <input type="text" class="form-control" id="NamePhotoInput" placeholder="ex : Carbonara">
+                        </div>
+                        <div class="mb-3">
+                            <label for="ImageInput" class="form-label">Image</label>
+                            <input type="file" class="form-control" id="ImageInput">
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Connexion</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<!-- Modal suppression -->
+<div class="modal fade" id="DeletePhotoModal" tabindex="-1" aria-labelledby="DeletePhotoModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title fs-5" id="DeletePhotoModal">Êtes-vous sûr de vouloir supprimer cette photo ?</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                    <form class="">
+                        <div class="mb-3">
+                            <p>Titre</p>
+                            <img src="/images/bar.jpg" class="rounded w-100">
+                        </div>
+                        <div class="text-center">
+                            <button type="button" class="btn btn-danger">Supprimer</button>
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Annuler</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
