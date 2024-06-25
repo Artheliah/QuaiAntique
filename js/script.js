@@ -1,4 +1,13 @@
 const tokenCookieName = "accesstoken";
+const signoutBtn = document.getElementById("signout-btn")
+
+signoutBtn.addEventListener("click", signout);
+
+function signout(){
+    eraseCookie(tokenCookieName);
+    window.location.reload();
+}
+
 
 function setToken(token){
     //le 7 correspond aux jours où les cookies sont valides, date d'expiration. Au bout de 7 jours il faudra donc se reconnecter
